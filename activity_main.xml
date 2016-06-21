@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.kashif.lab3.Main">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_the_service"
+        android:id="@+id/StartService"
+        android:layout_above="@+id/StopTheService"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/close"
+        android:layout_alignEnd="@+id/close" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stop_the_service"
+        android:id="@+id/StopTheService"
+        android:layout_above="@+id/Update"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/StartService"
+        android:layout_alignEnd="@+id/StartService" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update_the_values"
+        android:id="@+id/Update"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/StopTheService"
+        android:layout_alignEnd="@+id/StopTheService"
+        android:layout_above="@+id/close" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/close"
+        android:id="@+id/close"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LatValue"
+        android:text="0"
+        android:layout_alignBaseline="@+id/Latitude"
+        android:layout_alignBottom="@+id/Latitude"
+        android:layout_alignLeft="@+id/DistValue"
+        android:layout_alignStart="@+id/DistValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AvgSpeedValue"
+        android:text="0"
+        android:layout_alignBaseline="@+id/AvgSpeed"
+        android:layout_alignBottom="@+id/AvgSpeed"
+        android:layout_toRightOf="@+id/AvgSpeed"
+        android:layout_toEndOf="@+id/AvgSpeed"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LongValue"
+        android:text="0"
+        android:layout_below="@+id/LatValue"
+        android:layout_alignLeft="@+id/LatValue"
+        android:layout_alignStart="@+id/LatValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/average_speed"
+        android:id="@+id/AvgSpeed"
+        android:layout_below="@+id/Distance"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/longitude"
+        android:id="@+id/Longitude"
+        android:layout_below="@+id/Latitude"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/distance"
+        android:id="@+id/Distance"
+        android:layout_below="@+id/Longitude"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DistValue"
+        android:text="0"
+        android:layout_above="@+id/AvgSpeedValue"
+        android:layout_alignLeft="@+id/AvgSpeedValue"
+        android:layout_alignStart="@+id/AvgSpeedValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/latitude"
+        android:id="@+id/Latitude"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check GPS"
+        android:id="@+id/enableGPS"
+        android:layout_above="@id/StartService"
+        android:layout_alignRight="@+id/StartService"
+        android:layout_alignEnd="@+id/StartService"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
